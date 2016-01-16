@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>leaflet easy print</title>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link rel="stylesheet" href="file:///C:/Users/user/Desktop/New folder (3)/leaflet-easyPrint-gh-pages/dist/easyPrint.css"/>
+
+  	
+     
+</head>
+<body>
+<div id="map" style="width: 600px;height: 400px"></div>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src='http://cdn.jquery.com/jquery-2.1.0.min.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script src="file:///C:/Users/user/Desktop/New folder (3)/leaflet-easyPrint-gh-pages/dist/jQuery.print.js"></script>
+   <script src="file:///C:/Users/user/Desktop/New folder (3)/leaflet-easyPrint-gh-pages/dist/leaflet.easyPrint.js"></script>
+<script>
+var map = L.map('map').setView([14.6, 2.9], 5);
+mapLink = 
+'<a href="http://openstreetmap.org">openstreetmap</a>,'+'<a href="http://mapsnigeriainitiative.wordpress.com">mapsNI</a>';
+L.tileLayer(
+'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: ' &copy; ' + mapLink,
+maxZoom: 18}).addTo(map);
+
+L.marker([9, 7]).addTo(map);
+
+L.easyPrint().addTo(map)
+
+</script>
+</body>
+</html>
