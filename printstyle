@@ -12,6 +12,7 @@
 </head>
 <body style='background:#eeeeee'>
 <p style='color:red'>Click on the button on the bottom left to activate the style side bar</p>
+<p style='color:green'>Click again on the style editor button to remove the style side bar</p>
 <div id="map" style="width: 600px;height: 400px"></div>
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
