@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Combining multiple leaflet plugins on a single leaflet powered map</title>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/mayotunde/printmap/gh-pages/dist/easyPrint.css"/>
+<link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+  	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.rawgit.com/mayotunde/printmap/gh-pages/dist/Leaflet.StyleEditor.min.css" />
+     
+</head>
+<body style='background:#eeeeee'>
+<div id="map" style="width: 600px;height: 400px"></div>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src='http://cdn.jquery.com/jquery-2.1.0.min.js'></script>
+   <script src="https://cdn.rawgit.com/mayotunde/printmap/gh-pages/dist/jQuery.print.js"></script>
+   <script src="https://cdn.rawgit.com/mayotunde/printmap/gh-pages/dist/leaflet.easyPrint.js"></script>
+<script src="https://cdn.rawgit.com/mayotunde/printmap/gh-pages/dist/Leaflet.StyleEditor.min.js"></script>
+   
+<script>
+var map = L.map('map').setView([14.6, 2.9], 5);
+mapLink = 
+'<a href="http://openstreetmap.org">openstreetmap</a>,'+'<a href="http://mapsnigeriainitiative.wordpress.com">mapsNI</a>';
+L.tileLayer(
+'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: ' &copy; ' + mapLink,
+maxZoom: 18}).addTo(map);
+L.marker([9, 7]).addTo(map);
+L.easyPrint().addTo(map)
+var styleEditor = L.control.styleEditor({
+            position: "bottomleft"
+        });
+        map.addControl(styleEditor);
+ 
+</script>
+</body>
+</html>
+
+   
+
